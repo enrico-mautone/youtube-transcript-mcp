@@ -1,4 +1,4 @@
-# YouTube Transcript MCP
+# youtube-transcript-mcp
 
 A minimal Model Context Protocol server for retrieving YouTube transcripts.
 
@@ -8,13 +8,14 @@ A minimal Model Context Protocol server for retrieving YouTube transcripts.
 - `get_transcript(video_id, language_code=None)`
 - `get_transcript_from_url(url, language_code=None)`
 
-The transcript tools now return Markdown and also save a `.md` file under `./transcripts/`.
+The transcript tools return Markdown and save a `.md` file under `./transcripts/`.
 Supports standard YouTube watch URLs, shorts URLs, and `youtu.be` links.
 
 ## Setup
 
 ```bash
-cd ~/youtube-transcript-mcp
+git clone https://github.com/enrico-mautone/youtube-transcript-mcp.git
+cd youtube-transcript-mcp
 uv sync
 ```
 
@@ -44,7 +45,7 @@ This repository includes:
     "youtube-transcript-mcp": {
       "command": "uv",
       "args": ["run", "youtube-transcript-mcp"],
-      "cwd": "/home/enrico/youtube-trancscript-mcp"
+      "cwd": "/path/to/youtube-transcript-mcp"
     }
   }
 }
