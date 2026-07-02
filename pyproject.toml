@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "youtube-transcript-mcp"
+version = "0.1.0"
+description = "MCP server for retrieving YouTube transcripts"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = [
+  "mcp[cli]>=1.2.0",
+  "markdown-it-py>=4.0.0",
+  "requests>=2.32.0",
+  "youtube-transcript-api>=1.2.4",
+]
+
+[project.scripts]
+youtube-transcript-mcp = "youtube_transcript_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/youtube_transcript_mcp"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
