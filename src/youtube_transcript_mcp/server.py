@@ -19,6 +19,7 @@ logger = logging.getLogger("youtube_transcript_mcp")
 
 mcp = FastMCP("youtube-transcript-mcp")
 api = YouTubeTranscriptApi()
+# Markdown rendering uses markdown-it-py (MarkdownIt).
 md = MarkdownIt("commonmark")
 
 VIDEO_ID_RE = re.compile(r"(?<![A-Za-z0-9_-])([A-Za-z0-9_-]{11})(?![A-Za-z0-9_-])")

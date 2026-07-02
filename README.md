@@ -9,6 +9,7 @@ A minimal Model Context Protocol server for retrieving YouTube transcripts.
 - `get_transcript_from_url(url, language_code=None)`
 
 The transcript tools return Markdown and save a `.md` file under `./transcripts/`.
+Markdown rendering is handled with `markdown-it-py` (`MarkdownIt`).
 Supports standard YouTube watch URLs, shorts URLs, and `youtu.be` links.
 
 ## Setup
